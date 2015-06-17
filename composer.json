@@ -14,7 +14,8 @@
     ],
     "minimum-stability": "dev",
     "require": {
-        "php": ">=5.4.0"
+        "php": ">=5.4.0",
+        "twitter-bootstrap-wizard": "~1.2"
     },
     "repositories": [
         {
