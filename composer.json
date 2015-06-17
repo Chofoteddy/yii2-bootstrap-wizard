@@ -12,7 +12,7 @@
             "email": "chofoteddy88@yahoo.com.mx"
         }
     ],
-    "minimum-stability": "stable",
+    "minimum-stability": "dev",
     "require": {
         "php": ">=5.4.0",
         "VinceG/twitter-bootstrap-wizard": "~1.2"
