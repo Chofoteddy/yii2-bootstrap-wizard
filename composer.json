@@ -23,6 +23,6 @@
         }
     ],
     "autoload": {
-        "psr-4": {"Chofoteddy\\Wizard\\": ""}
+        "psr-4": {"chofoteddy\\wizard\\": ""}
     }
 }
