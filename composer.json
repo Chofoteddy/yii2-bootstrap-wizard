@@ -19,7 +19,7 @@
     },
     "repositories": [
         {
-            "type": "vcs",
+            "type": "package",
             "package": {
                 "name": "VinceG/twitter-bootstrap-wizard",
                 "version": "1.2",
@@ -29,7 +29,7 @@
                 },
                 "source": {
                     "url": "https://github.com/VinceG/twitter-bootstrap-wizard.git",
-                    "type": "git",
+                    "type": "vcs",
                     "reference": "master"
                 }
             }
