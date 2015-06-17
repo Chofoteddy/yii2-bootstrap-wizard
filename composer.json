@@ -4,6 +4,7 @@
     "homepage": "https://github.com/Chofoteddy/yii2-bootstrap-wizard",
     "keywords": ["yii2", "wizard", "bootstrap", "yii2-extension"],
     "type": "yii2-extension",
+    "version": "0.1",
     "license": "MIT",
     "authors": [
         {
