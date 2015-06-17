@@ -20,16 +20,18 @@
     "repositories": [
         {
             "type": "vcs",
-            "name": "VinceG/twitter-bootstrap-wizard",
-            "version": "1.2",
-            "dist": {
-                "url": "https://github.com/VinceG/twitter-bootstrap-wizard/archive/master.zip",
-                "type": "zip"
-            },
-            "source": {
-                "url": "https://github.com/VinceG/twitter-bootstrap-wizard.git",
-                "type": "git",
-                "reference": "master"
+            "package" {
+                "name": "VinceG/twitter-bootstrap-wizard",
+                "version": "1.2",
+                "dist": {
+                    "url": "https://github.com/VinceG/twitter-bootstrap-wizard/archive/master.zip",
+                    "type": "zip"
+                },
+                "source": {
+                    "url": "https://github.com/VinceG/twitter-bootstrap-wizard.git",
+                    "type": "git",
+                    "reference": "master"
+                }
             }
         }
     ],
