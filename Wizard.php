@@ -10,7 +10,7 @@ namespace chofoteddy\wizard;
 use Yii;
 use yii\helpers\ArrayHelper;
 
-use chofoteddy\WizzardAsset;
+use chofoteddy\wizard\WizardAsset;
 
 /**
 * 
@@ -29,6 +29,6 @@ class Wizard extends \yii\bootstrap\Widget
     public function registerAssets()
     {
         $view = $this->getView();
-        WizzardAsset::register( $view );
+        WizardAsset::register( $view );
     }
 }
