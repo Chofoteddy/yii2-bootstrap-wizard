@@ -1,0 +1,39 @@
+{
+    "name": "chofoteddy/yii2-bootstrap-wizard",
+    "description": "Wizard form based on twitter bootstrap plugin (@VinceG)",
+    "homepage": "https://github.com/Chofoteddy/yii2-bootstrap-wizard",
+    "keywords": ["yii2", "wizard", "bootstrap", "yii2-extension"],
+    "type": "yii2-extension",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Christopher",
+            "email": "chofoteddy88@yahoo.com.mx"
+        }
+    ],
+    "minimum-stability": "stable",
+    "require": {
+        "VinceG/twitter-bootstrap-wizard": "~1.2"
+    },
+    "repositories": [
+        {
+            "type": "package",
+            "package": {
+                "name": "VinceG/twitter-bootstrap-wizard",
+                "version": "1.2",
+                "dist": {
+                    "url": "https://github.com/VinceG/twitter-bootstrap-wizard/archive/master.zip",
+                    "type": "zip"
+                },
+                "source": {
+                    "url": "https://github.com/VinceG/twitter-bootstrap-wizard.git",
+                    "type": "git",
+                    "reference": "master"
+                }
+            }
+        }
+    ],
+    "autoload": {
+        "psr-4": {"Chofoteddy\\Wizard\\": ""}
+    }
+}
