@@ -20,7 +20,7 @@
     "repositories": [
         {
             "type": "vcs",
-            "package" {
+            "package": {
                 "name": "VinceG/twitter-bootstrap-wizard",
                 "version": "1.2",
                 "dist": {
