@@ -19,29 +19,18 @@
     ],
     "minimum-stability": "dev",
     "require": {
-        "php": ">=5.4.0"
+        "php": ">=5.4.0",
+        "bower-asset/twitter-bootstrap-wizard": "~1.2"
     },
-    "repositories": [
-        {
-            "type": "package",
-            "package": {
-                "name": "VinceG/twitter-bootstrap-wizard",
-                "version": "1.2",
-                "dist": {
-                    "url": "https://github.com/VinceG/twitter-bootstrap-wizard/archive/1.2.zip",
-                    "type": "zip"
-                },
-                "source": {
-                    "url": "https://github.com/VinceG/twitter-bootstrap-wizard.git",
-                    "type": "git",
-                    "reference": "1.2"
-                }
-            }
-        }
-    ],
+    "repositories": [],
     "autoload": {
         "psr-4": {
             "chofoteddy\\wizard\\": ""
+        }
+    },
+    "extra": {
+        "asset-installer-paths": {
+            "bower-asset-library": "vendor/bower"
         }
     }
 }
