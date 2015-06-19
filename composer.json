@@ -20,8 +20,7 @@
     "minimum-stability": "dev",
     "require": {
         "php": ">=5.4.0",
-        "bower-asset/bootstrap": "~3.3.4",
-        "bower-asset/twitter-bootstrap-wizard": "~1.2"
+        "bower-asset/twitter-bootstrap-wizard": "*"
     },
     "repositories": [],
     "autoload": {
