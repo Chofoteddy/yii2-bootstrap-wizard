@@ -19,13 +19,24 @@
     ],
     "minimum-stability": "dev",
     "require": {
-        "php": ">=5.4.0",
-        "VinceG/twitter-bootstrap-wizard": "*"
+        "php": ">=5.4.0"
     },
     "repositories": [
         {
-            "type": "vcs",
-            "url": "https://github.com/VinceG/twitter-bootstrap-wizard"
+            "type": "package",
+            "package": {
+                "name": "VinceG/twitter-bootstrap-wizard",
+                "version": "1.2",
+                "dist": {
+                    "url": "https://github.com/VinceG/twitter-bootstrap-wizard/archive/1.2.zip",
+                    "type": "zip"
+                },
+                "source": {
+                    "url": "https://github.com/VinceG/twitter-bootstrap-wizard.git",
+                    "type": "git",
+                    "reference": "1.2"
+                }
+            }
         }
     ],
     "autoload": {
