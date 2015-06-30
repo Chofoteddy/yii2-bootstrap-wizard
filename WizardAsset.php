@@ -15,7 +15,7 @@ use yii\helpers\ArrayHelper;
 */
 class WizardAsset extends \yii\web\AssetBundle
 {
-    public $baseUr = '@vendor/chofoteddy/VinceG/twitter-bootstrap-wizard/';
+    public $sourcePath = '@bower/twitter-bootstrap-wizard/';
     
     public $css = [];
 
