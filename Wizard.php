@@ -8,9 +8,10 @@
 namespace chofoteddy\wizard;
 
 use Yii;
+use yii\base\InvalidConfigException;
+use yii\bootstrap\Nav;
 use yii\helpers\ArrayHelper;
 use yii\helpers\Html;
-use yii\base\InvalidConfigException;
 
 /**
  * Wizard renders a wizard bootstrap javascript component.
@@ -101,9 +102,25 @@ class Wizard extends \yii\bootstrap\Widget
     public $headerOptions = [];
 
     /**
+     * @var array options to get passed to the \yii\bootstrap\Nav widget
+     *
+     * @see \yii\bootstrap\Widget::$options for details.
+     */
+    public $navOptions = [];
+
+    /**
      * @var boolean whether the labels for header items should be HTML-encoded.
      */
     public $encodeLabels = true;
+
+    /**
+     * @inheritdoc
+     */
+    public function init()
+    {
+        parent::init();
+        Html::addCssClass($this->itemOptions, ['widget' => 'tab-pane']);
+    }
 
     /**
      * @inheritdoc
@@ -170,13 +187,23 @@ class Wizard extends \yii\bootstrap\Widget
             $itemOptions['id'] = ArrayHelper::getValue(
                 $itemOptions,
                 'id',
-                $this->options['id'] . '-tab' . $n
+                $this->options['id'] . '-wizard' . $n
             );
             if (isset($item['url'])) {
-                $label = Html::a($label, $item['url'], $linkOptions);
+                $labels[] = [
+                    'label' => $label,
+                    'url' => $item['url'],
+                    'linkOptions' => $linkOptions,
+                    'options' => $labelOptions,
+               ];
             } else {
                 $linkOptions['data-toggle'] = 'tab';
-                $label = Html::a($label, '#' . $itemOptions['id'], $linkOptions);
+                $labels[] = [
+                    'label' => $label,
+                    'url' => '#' . $itemOptions['id'],
+                    'linkOptions' => $linkOptions,
+                    'options' => $labelOptions,
+                ];
             }
 
             $contents[] = Html::tag(
@@ -185,19 +212,14 @@ class Wizard extends \yii\bootstrap\Widget
                 $itemOptions
             );
 
-            $labels[] = Html::tag(
-                ArrayHelper::getValue($labelOptions, 'tag', 'li'),
-                Html::a($label,
-                $labelOptions
-            );
-
             $n++;
         }
 
-        return Html::tag(
-            ArrayHelper::getValue($this->headerOptions, 'tag', 'ul'),
-            implode("\n", $labels),
-            $this->headerOptions
-        ) .  implode("\n", $contents);
+        return Nav::widget(['items' => $labels, 'options' => $this->navOptions])
+            . Html::tag(
+                'div',
+                implode("\n", $contents),
+                ['class' => 'tab-content']
+            );
     }
 }
