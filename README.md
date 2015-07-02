@@ -46,9 +46,9 @@ use chofoteddy\wizard\Wizard;
 
 Wizard renders a wizard bootstrap javascript component.
 
-### Class chofoteddy\wizard\Wizard
-| Clase | chofoteddy\wizard\Wizard |
-|-|-|
+### Estructura
+| Clase               | chofoteddy\wizard\Wizard                                                                                                                                                                                                                                                                                                                                         |
+|---------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | **Inheritance**     | chofoteddy\wizard\Wizard » [yii\bootstrap\Widget](http://www.yiiframework.com/doc-2.0/yii-bootstrap-widget.html) » [yii\base\Widget](http://www.yiiframework.com/doc-2.0/yii-base-widget.html) » [yii\base\Component](http://www.yiiframework.com/doc-2.0/yii-base-component.html) » [yii\base\Object](http://www.yiiframework.com/doc-2.0/yii-base-object.html) |
 
 ### Public properties
