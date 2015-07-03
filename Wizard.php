@@ -48,6 +48,108 @@ use yii\helpers\Html;
 class Wizard extends \yii\bootstrap\Widget
 {
     /**
+     * @var array|Nav configuration for the Nav header or the Nav Object
+     */
+    private $_nav = ['class' => 'yii\bootstrap\Nav'];
+
+    public function setNavClass($class)
+    {
+        if (is_object($this->_nav)) {
+            throw new InvalidConfigException(
+                'The object has already being created.'
+            );
+        }
+
+        $class = (string) $class;
+        if (!is_subclass_of($class, Nav::className())) {
+            throw new InvalidConfigException(
+                "$class must extend " . Nav::className()
+            );
+        }
+
+        $this->_nav['class'] = $class;
+    }
+
+    public function getNavClass()
+    {
+        if (is_object($this->_nav)) {
+            return get_class($this->_nav);
+        } else {
+            return $this->_nav['class'];
+        }
+    }
+
+    public function setNavObject($object)
+    {
+        if ($object instanceof Nav) {
+            $this->_nav = $object;
+        } else {
+            throw new InvalidConfigException(
+                'The object must be an instance of ' . Nav::className()
+            );
+        }
+    }
+
+    public function getNavObject($object)
+    {
+        $this->ensureNav();
+        return $this->_nav;
+    }
+
+    public function setNavOptions(array $options)
+    {
+        if (is_object($this->_nav)) {
+            $this->_nav->options = $options;
+        } else {
+            $this->_nav['options'] = $options;
+        }
+    }
+
+    public function getNavOptions()
+    {
+        return ArrayHelper::getValue($this->_nav, 'options'); 
+    }
+
+    public function setNav($nav) {
+         if (is_string($nav) {
+             return $this->setNavClass($nav);
+         } elseif (is_object($nav)) {
+             return $this->setNavObject($nav);
+         } elseif (is_array($nav)) {
+             if ($class = ArrayHelper::remove($nav, 'class');
+                 $this->setNavClass($class);
+             }
+
+             $this->_nav = array_merge($this->_nav, $nav);
+         } else {
+            throw new InvalidConfigException(
+                'Expecting class string, configuration array or `Nav` object'
+            );
+         }
+    }
+
+    public function getNav()
+    {
+        $this->ensureNav();
+        return $this->_nav;
+    }
+
+    public function ensureNav()
+    {
+        if (is_object($this->_nav)) {
+            return;
+        }
+
+        $this->_nav = Yii::createObject($this->_nav);
+    }
+
+    public function navWidget()
+    {
+        $class = $this->getNavClass();
+        return $class::widget($this->_nav);
+    }
+
+    /**
      * @var array list of groups in the wizard widget. Each array element
      * represents a single group with the following structure:
      *
@@ -72,7 +174,7 @@ class Wizard extends \yii\bootstrap\Widget
      *
      * @see \yii\helpers\Html::renderTagAttributes() for details on how attributes are being rendered.
      */
-    public $itemOptions = [];
+    public $contentOptions = [];
 
     /**
      * @var array list of HTML attributes for the item container tags. This will be overwritten
@@ -100,13 +202,6 @@ class Wizard extends \yii\bootstrap\Widget
      * @see \yii\helpers\Html::renderTagAttributes() for details on how attributes are being rendered.
      */
     public $headerOptions = [];
-
-    /**
-     * @var array options to get passed to the \yii\bootstrap\Nav widget
-     *
-     * @see \yii\bootstrap\Widget::$options for details.
-     */
-    public $navOptions = [];
 
     /**
      * @var boolean whether the labels for header items should be HTML-encoded.
@@ -215,8 +310,9 @@ class Wizard extends \yii\bootstrap\Widget
             $n++;
         }
 
-        return Nav::widget(['items' => $labels, 'options' => $this->navOptions])
-            . Html::tag(
+        $this->setNav(['items' => $labels]);
+
+        return $this->navWidget() . Html::tag(
                 'div',
                 implode("\n", $contents),
                 ['class' => 'tab-content']
