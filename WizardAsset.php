@@ -11,18 +11,32 @@ use Yii;
 use yii\helpers\ArrayHelper;
 
 /**
-* @author Chofoteddy
-*/
+ * Bower asset for the Twitter Bootstrap Wizard
+ * @author Chofoteddy
+ * @author Faryshta <angeldelcaos@gmail.com>
+ */
 class WizardAsset extends \yii\web\AssetBundle
 {
+    /**
+     * @inheritdoc
+     */
     public $sourcePath = '@bower/twitter-bootstrap-wizard/';
     
+    /**
+     * @inheritdoc
+     */
     public $css = [];
 
+    /**
+     * @inheritdoc
+     */
     public $js = [
         'jquery.bootstrap.wizard.min.js'
     ];
 
+    /**
+     * @inheritdoc
+     */
     public $depends = [
        'yii\web\YiiAsset',
        'yii\bootstrap\BootstrapAsset',
