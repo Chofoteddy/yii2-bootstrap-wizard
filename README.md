@@ -18,14 +18,11 @@ composer.phar require chofoteddy/yii2-bootstrap-wizard "*"
 
 ## Usage
 
-```
+```php
 <?php
 use chofoteddy\wizard\Wizard;
 
-/* @var $this yii\web\View */
-?>
-
-<?= Wizard::widget([
+echo Wizard::widget([
     'items' => [
         // wizard step
         [
