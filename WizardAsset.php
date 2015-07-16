@@ -21,11 +21,6 @@ class WizardAsset extends \yii\web\AssetBundle
      * @inheritdoc
      */
     public $sourcePath = '@bower/twitter-bootstrap-wizard/';
-    
-    /**
-     * @inheritdoc
-     */
-    public $css = [];
 
     /**
      * @inheritdoc
