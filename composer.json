@@ -16,13 +16,20 @@
             "name": "Christopher",
             "email": "chofoteddy88@yahoo.com.mx"
         }
+        {
+            "name": "Faryshta",
+            "email": "angeldelcaos@gmail.com"
+        }
     ],
     "minimum-stability": "dev",
     "require": {
         "php": ">=5.4.0",
+        "yiisoft/yii2-bootstrap": "*",
         "bower-asset/twitter-bootstrap-wizard": "*"
     },
-    "repositories": [],
+    "require-dev": {
+        "yiisoft/yii2-apidoc": "*"
+    },
     "autoload": {
         "psr-4": {
             "chofoteddy\\wizard\\": ""
