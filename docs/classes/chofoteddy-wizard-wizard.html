@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="language" content="en" />
+        <link href="./assets/ed9e00df/css/bootstrap.css" rel="stylesheet">
+<link href="./assets/337bbfc8/style.css" rel="stylesheet">
+<script src="./assets/2ea13f11/jquery.js"></script>
+<script src="./assets/ed9e00df/js/bootstrap.js"></script>
+<script src="./assets/9513c7f9/jssearch.js"></script>    <title>Wizard, chofoteddy\wizard\Wizard - Yii Framework 2.0 API Documentation</title>
+</head>
+<body>
+
+<div class="wrap">
+    <nav id="w4" class="navbar-inverse navbar-fixed-top navbar" role="navigation"><div class="navbar-header"><button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#w4-collapse"><span class="sr-only">Toggle navigation</span>
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+<span class="icon-bar"></span></button><a class="navbar-brand" href="./index.html">Yii Framework 2.0 API Documentation</a></div><div id="w4-collapse" class="collapse navbar-collapse"><ul id="w5" class="navbar-nav nav"><li><a href="./index.html">Class reference</a></li></ul><div class="navbar-form navbar-left" role="search">
+  <div class="form-group">
+    <input id="searchbox" type="text" class="form-control" placeholder="Search">
+  </div>
+</div>
+</div></nav>
+    <div id="search-resultbox" style="display: none;" class="modal-content">
+        <ul id="search-results">
+        </ul>
+    </div>
+
+    
+<div class="row">
+    <div class="col-md-3">
+                <div id="navigation" class="list-group"><a class="list-group-item active" href="#navigation-3" data-toggle="collapse" data-parent="#navigation">chofoteddy\wizard <b class="caret"></b></a><div id="navigation-3" class="submenu panel-collapse collapse in"><a class="list-group-item active" href="./chofoteddy-wizard-wizard.html">Wizard</a>
+<a class="list-group-item" href="./chofoteddy-wizard-wizardasset.html">WizardAsset</a></div></div>    </div>
+    <div class="col-md-9 api-content" role="main">
+        <h1>Class chofoteddy\wizard\Wizard</h1>
+<div class="top-nav">
+    <a href="index.html">All Classes</a>
+            | <a href="#properties">Properties</a>
+                | <a href="#methods">Methods</a>
+            </div>
+
+<table class="summaryTable docClass table table-bordered">
+    <colgroup>
+        <col class="col-name" />
+        <col class="col-value" />
+    </colgroup>
+            <tr><th>Inheritance</th><td><a href="chofoteddy-wizard-wizard.html">chofoteddy\wizard\Wizard</a> &raquo;
+yii\bootstrap\Widget</td></tr>
+                                        </table>
+
+<div class="class-description">
+    <p><strong>Wizard renders a wizard bootstrap javascript component.</strong></p>
+    <p>For example:</p>
+<pre><code class="language-php"><span style="color: #0000BB"></span><span style="color: #007700">echo&nbsp;</span><span style="color: #0000BB">Wizard</span><span style="color: #007700">::</span><span style="color: #0000BB">widget</span><span style="color: #007700">([<br />&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #DD0000">'items'&nbsp;</span><span style="color: #007700">=&gt;&nbsp;[<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #FF8000">//&nbsp;equivalent&nbsp;to&nbsp;the&nbsp;above<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #007700">[<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #DD0000">'label'&nbsp;</span><span style="color: #007700">=&gt;&nbsp;</span><span style="color: #DD0000">'Collapsible&nbsp;Group&nbsp;Item&nbsp;#1'</span><span style="color: #007700">,<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #DD0000">'content'&nbsp;</span><span style="color: #007700">=&gt;&nbsp;</span><span style="color: #DD0000">'Anim&nbsp;pariatur&nbsp;cliche...'</span><span style="color: #007700">,<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #FF8000">//&nbsp;open&nbsp;its&nbsp;content&nbsp;by&nbsp;default<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #DD0000">'contentOptions'&nbsp;</span><span style="color: #007700">=&gt;&nbsp;[</span><span style="color: #DD0000">'class'&nbsp;</span><span style="color: #007700">=&gt;&nbsp;</span><span style="color: #DD0000">'in'</span><span style="color: #007700">]<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;],<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #FF8000">//&nbsp;another&nbsp;wizard&nbsp;step<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #007700">[<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #DD0000">'label'&nbsp;</span><span style="color: #007700">=&gt;&nbsp;</span><span style="color: #DD0000">'Collapsible&nbsp;Group&nbsp;Item&nbsp;#1'</span><span style="color: #007700">,<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #DD0000">'content'&nbsp;</span><span style="color: #007700">=&gt;&nbsp;</span><span style="color: #DD0000">'Anim&nbsp;pariatur&nbsp;cliche...'</span><span style="color: #007700">,<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #DD0000">'contentOptions'&nbsp;</span><span style="color: #007700">=&gt;&nbsp;[...],<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #DD0000">'options'&nbsp;</span><span style="color: #007700">=&gt;&nbsp;[...],<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;],<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #FF8000">//&nbsp;short&nbsp;cut&nbsp;to&nbsp;label&nbsp;=&gt;&nbsp;content<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #DD0000">'Finished'&nbsp;</span><span style="color: #007700">=&gt;&nbsp;</span><span style="color: #DD0000">'Thanks&nbsp;for&nbsp;filling&nbsp;your&nbsp;information'<br />&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #007700">]<br />]);</span></code></pre>
+
+    <p>See also <a href="http://vadimg.com/twitter-bootstrap-wizard-example/">http://vadimg.com/twitter-bootstrap-wizard-example/</a>.</p></div>
+
+<a id="properties"></a>
+
+<div class="summary doc-property">
+<h2>Public Properties</h2>
+
+<p><a href="#" class="toggle">Hide inherited properties</a></p>
+
+<table class="summary-table table table-striped table-bordered table-hover">
+<colgroup>
+    <col class="col-property" />
+    <col class="col-type" />
+    <col class="col-description" />
+    <col class="col-defined" />
+</colgroup>
+<tr>
+  <th>Property</th><th>Type</th><th>Description</th><th>Defined By</th>
+</tr>
+        <tr id="$encodeLabels">
+        <td><a href="chofoteddy-wizard-wizard.html#$encodeLabels-detail">$encodeLabels</a></td>
+        <td><a href="http://www.php.net/language.types.boolean">boolean</a></td>
+        <td>Whether the labels for header items should be HTML-encoded.</td>
+        <td><a href="chofoteddy-wizard-wizard.html">chofoteddy\wizard\Wizard</a></td>
+    </tr>
+            <tr id="$headerOptions">
+        <td><a href="chofoteddy-wizard-wizard.html#$headerOptions-detail">$headerOptions</a></td>
+        <td><a href="http://www.php.net/language.types.array">array</a></td>
+        <td>List of HTML attributes for the header container tags.</td>
+        <td><a href="chofoteddy-wizard-wizard.html">chofoteddy\wizard\Wizard</a></td>
+    </tr>
+            <tr id="$itemOptions">
+        <td><a href="chofoteddy-wizard-wizard.html#$itemOptions-detail">$itemOptions</a></td>
+        <td><a href="http://www.php.net/language.types.array">array</a></td>
+        <td>List of HTML attributes for the item container tags.</td>
+        <td><a href="chofoteddy-wizard-wizard.html">chofoteddy\wizard\Wizard</a></td>
+    </tr>
+            <tr id="$items">
+        <td><a href="chofoteddy-wizard-wizard.html#$items-detail">$items</a></td>
+        <td><a href="http://www.php.net/language.types.array">array</a></td>
+        <td>List of groups in the wizard widget.</td>
+        <td><a href="chofoteddy-wizard-wizard.html">chofoteddy\wizard\Wizard</a></td>
+    </tr>
+            <tr id="$labelOptions">
+        <td><a href="chofoteddy-wizard-wizard.html#$labelOptions-detail">$labelOptions</a></td>
+        <td><a href="http://www.php.net/language.types.array">array</a></td>
+        <td>List of HTML attributes for the item container tags.</td>
+        <td><a href="chofoteddy-wizard-wizard.html">chofoteddy\wizard\Wizard</a></td>
+    </tr>
+            <tr id="$linkOptions">
+        <td><a href="chofoteddy-wizard-wizard.html#$linkOptions-detail">$linkOptions</a></td>
+        <td><a href="http://www.php.net/language.types.array">array</a></td>
+        <td>List of HTML attributes for the tab header link tags.</td>
+        <td><a href="chofoteddy-wizard-wizard.html">chofoteddy\wizard\Wizard</a></td>
+    </tr>
+            <tr id="$navOptions">
+        <td><a href="chofoteddy-wizard-wizard.html#$navOptions-detail">$navOptions</a></td>
+        <td><a href="http://www.php.net/language.types.array">array</a></td>
+        <td>Options to get passed to the \yii\bootstrap\Nav widget</td>
+        <td><a href="chofoteddy-wizard-wizard.html">chofoteddy\wizard\Wizard</a></td>
+    </tr>
+    </table>
+</div>
+
+<a id="methods"></a>
+
+<div class="summary doc-method">
+<h2>Public Methods</h2>
+
+<p><a href="#" class="toggle">Hide inherited methods</a></p>
+
+<table class="summary-table table table-striped table-bordered table-hover">
+<colgroup>
+    <col class="col-method" />
+    <col class="col-description" />
+    <col class="col-defined" />
+</colgroup>
+<tr>
+  <th>Method</th><th>Description</th><th>Defined By</th>
+</tr>
+        <tr id="init()">
+        <td><a href="chofoteddy-wizard-wizard.html#init()-detail">init()</a></td>
+        <td></td>
+        <td><a href="chofoteddy-wizard-wizard.html">chofoteddy\wizard\Wizard</a></td>
+    </tr>
+            <tr id="renderItems()">
+        <td><a href="chofoteddy-wizard-wizard.html#renderItems()-detail">renderItems()</a></td>
+        <td>Renders wizard items as specified on <a href="chofoteddy-wizard-wizard.html#$items-detail">$items</a>.</td>
+        <td><a href="chofoteddy-wizard-wizard.html">chofoteddy\wizard\Wizard</a></td>
+    </tr>
+            <tr id="run()">
+        <td><a href="chofoteddy-wizard-wizard.html#run()-detail">run()</a></td>
+        <td></td>
+        <td><a href="chofoteddy-wizard-wizard.html">chofoteddy\wizard\Wizard</a></td>
+    </tr>
+    </table>
+</div>
+
+<a id="events"></a>
+
+<a id="constants"></a>
+
+<h2>Property Details</h2>
+
+<div class="property-doc">
+
+    <div class="detail-header h3" id="$encodeLabels-detail">
+        <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
+        <a class="tool-link hash" href="chofoteddy-wizard-wizard.html#$encodeLabels-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
+        
+        $encodeLabels        <span class="detail-header-tag small">
+            public                                                property
+                    </span>
+    </div>
+
+    <div class="doc-description">
+        <p>Whether the labels for header items should be HTML-encoded.</p>
+
+            </div>
+
+    <div class="signature"><span class="signature-defs">public</span> <span class="signature-type"><a href="http://www.php.net/language.types.boolean">boolean</a></span> <a href="chofoteddy-wizard-wizard.html#$encodeLabels-detail">$encodeLabels</a> <span style="color: #0000BB"></span><span style="color: #007700">=&nbsp;</span><span style="color: #0000BB">true</span></div>
+
+
+    <div class="detail-header h3" id="$headerOptions-detail">
+        <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
+        <a class="tool-link hash" href="chofoteddy-wizard-wizard.html#$headerOptions-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
+        
+        $headerOptions        <span class="detail-header-tag small">
+            public                                                property
+                    </span>
+    </div>
+
+    <div class="doc-description">
+        <p>List of HTML attributes for the header container tags.
+The following special options are recognized:</p>
+<ul>
+<li>tag: string, defaults to "ul", the tag name of the item container tags.</li>
+</ul>
+
+        <p>See also <span class="broken-link">\yii\helpers\Html::renderTagAttributes()</span> for details on how attributes are being rendered.</p>    </div>
+
+    <div class="signature"><span class="signature-defs">public</span> <span class="signature-type"><a href="http://www.php.net/language.types.array">array</a></span> <a href="chofoteddy-wizard-wizard.html#$headerOptions-detail">$headerOptions</a> <span style="color: #0000BB"></span><span style="color: #007700">=&nbsp;[]</span></div>
+
+
+    <div class="detail-header h3" id="$itemOptions-detail">
+        <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
+        <a class="tool-link hash" href="chofoteddy-wizard-wizard.html#$itemOptions-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
+        
+        $itemOptions        <span class="detail-header-tag small">
+            public                                                property
+                    </span>
+    </div>
+
+    <div class="doc-description">
+        <p>List of HTML attributes for the item container tags. This will be overwritten
+by the "options" set in individual <a href="chofoteddy-wizard-wizard.html#$items-detail">$items</a>. The following special options are recognized:</p>
+<ul>
+<li>tag: string, defaults to "div", the tag name of the item container tags.</li>
+</ul>
+
+        <p>See also <span class="broken-link">\yii\helpers\Html::renderTagAttributes()</span> for details on how attributes are being rendered.</p>    </div>
+
+    <div class="signature"><span class="signature-defs">public</span> <span class="signature-type"><a href="http://www.php.net/language.types.array">array</a></span> <a href="chofoteddy-wizard-wizard.html#$itemOptions-detail">$itemOptions</a> <span style="color: #0000BB"></span><span style="color: #007700">=&nbsp;[]</span></div>
+
+
+    <div class="detail-header h3" id="$items-detail">
+        <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
+        <a class="tool-link hash" href="chofoteddy-wizard-wizard.html#$items-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
+        
+        $items        <span class="detail-header-tag small">
+            public                                                property
+                    </span>
+    </div>
+
+    <div class="doc-description">
+        <p>List of groups in the wizard widget. Each array element
+represents a single group with the following structure:</p>
+<ul>
+<li>label: string, required, the group header label.</li>
+<li>url: string|array, optional, an external URL. When this is specified,
+clicking on this tab will bring</li>
+<li>encode: boolean, optional, whether this label should be HTML-encoded.
+This param will override global <code>$this-&gt;encodeLabels</code> param.</li>
+<li>content: array|string|object, required, the content (HTML) of the group</li>
+<li>options: array, optional, the HTML attributes of the group</li>
+<li>contentOptions: optional, the HTML attributes of the group's content</li>
+<li>visible: boolean, optional, whether the item should be visible or not.
+Defaults to true.</li>
+</ul>
+
+            </div>
+
+    <div class="signature"><span class="signature-defs">public</span> <span class="signature-type"><a href="http://www.php.net/language.types.array">array</a></span> <a href="chofoteddy-wizard-wizard.html#$items-detail">$items</a> <span style="color: #0000BB"></span><span style="color: #007700">=&nbsp;[]</span></div>
+
+
+    <div class="detail-header h3" id="$labelOptions-detail">
+        <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
+        <a class="tool-link hash" href="chofoteddy-wizard-wizard.html#$labelOptions-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
+        
+        $labelOptions        <span class="detail-header-tag small">
+            public                                                property
+                    </span>
+    </div>
+
+    <div class="doc-description">
+        <p>List of HTML attributes for the item container tags. This will be overwritten
+by the "options" set in individual <a href="chofoteddy-wizard-wizard.html#$items-detail">$items</a>. The following special options are recognized:</p>
+<ul>
+<li>tag: string, defaults to "li", the tag name of the item container tags.</li>
+</ul>
+
+        <p>See also <span class="broken-link">\yii\helpers\Html::renderTagAttributes()</span> for details on how attributes are being rendered.</p>    </div>
+
+    <div class="signature"><span class="signature-defs">public</span> <span class="signature-type"><a href="http://www.php.net/language.types.array">array</a></span> <a href="chofoteddy-wizard-wizard.html#$labelOptions-detail">$labelOptions</a> <span style="color: #0000BB"></span><span style="color: #007700">=&nbsp;[]</span></div>
+
+
+    <div class="detail-header h3" id="$linkOptions-detail">
+        <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
+        <a class="tool-link hash" href="chofoteddy-wizard-wizard.html#$linkOptions-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
+        
+        $linkOptions        <span class="detail-header-tag small">
+            public                                                property
+                    </span>
+    </div>
+
+    <div class="doc-description">
+        <p>List of HTML attributes for the tab header link tags. This will be overwritten
+by the "linkOptions" set in individual <a href="chofoteddy-wizard-wizard.html#$items-detail">$items</a>.</p>
+
+        <p>See also <span class="broken-link">\yii\helpers\Html::renderTagAttributes()</span> for details on how attributes are being rendered.</p>    </div>
+
+    <div class="signature"><span class="signature-defs">public</span> <span class="signature-type"><a href="http://www.php.net/language.types.array">array</a></span> <a href="chofoteddy-wizard-wizard.html#$linkOptions-detail">$linkOptions</a> <span style="color: #0000BB"></span><span style="color: #007700">=&nbsp;[]</span></div>
+
+
+    <div class="detail-header h3" id="$navOptions-detail">
+        <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
+        <a class="tool-link hash" href="chofoteddy-wizard-wizard.html#$navOptions-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
+        
+        $navOptions        <span class="detail-header-tag small">
+            public                                                property
+                    </span>
+    </div>
+
+    <div class="doc-description">
+        <p>Options to get passed to the \yii\bootstrap\Nav widget</p>
+
+        <p>See also <span class="broken-link">\yii\bootstrap\Widget::$options</span> for details.</p>    </div>
+
+    <div class="signature"><span class="signature-defs">public</span> <span class="signature-type"><a href="http://www.php.net/language.types.array">array</a></span> <a href="chofoteddy-wizard-wizard.html#$navOptions-detail">$navOptions</a> <span style="color: #0000BB"></span><span style="color: #007700">=&nbsp;[]</span></div>
+
+</div>
+<h2>Method Details</h2>
+
+<div class="method-doc">
+
+    <div class="detail-header h3" id="init()-detail">
+        <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
+        <a class="tool-link hash" href="chofoteddy-wizard-wizard.html#init()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
+        
+        init()
+        <span class="detail-header-tag small">
+            public                                    method
+                    </span>
+    </div>
+
+    <div class="doc-description">
+        <p><strong></strong></p>
+
+        
+            </div>
+
+    <table class="detail-table table table-striped table-bordered table-hover">
+        <tr><td colspan="3" class="signature"><span class="signature-defs">public</span> <span class="signature-type">void</span> <strong><a href="chofoteddy-wizard-wizard.html#init()-detail">init</a></strong> ( )</td></tr>
+            </table>
+
+<!--	-->
+
+    <div class="detail-header h3" id="renderItems()-detail">
+        <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
+        <a class="tool-link hash" href="chofoteddy-wizard-wizard.html#renderItems()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
+        
+        renderItems()
+        <span class="detail-header-tag small">
+            public                                    method
+                    </span>
+    </div>
+
+    <div class="doc-description">
+        <p><strong>Renders wizard items as specified on <a href="chofoteddy-wizard-wizard.html#$items-detail">$items</a>.</strong></p>
+
+        
+            </div>
+
+    <table class="detail-table table table-striped table-bordered table-hover">
+        <tr><td colspan="3" class="signature"><span class="signature-defs">public</span> <span class="signature-type"><a href="http://www.php.net/language.types.string">string</a></span> <strong><a href="chofoteddy-wizard-wizard.html#renderItems()-detail">renderItems</a></strong> ( )</td></tr>
+                                                <tr>
+                  <th class="param-name-col">return</th>
+                  <td class="param-type-col"><a href="http://www.php.net/language.types.string">string</a></td>
+                  <td class="param-desc-col"><p>The rendering result.</p>
+</td>
+                </tr>
+                                        <tr>
+                  <th class="param-name-col">throws</th>
+                  <td class="param-type-col">\chofoteddy\wizard\InvalidConfigException.</td>
+                  <td class="param-desc-col"></td>
+                </tr>
+                        </table>
+
+<!--	-->
+
+    <div class="detail-header h3" id="run()-detail">
+        <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
+        <a class="tool-link hash" href="chofoteddy-wizard-wizard.html#run()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
+        
+        run()
+        <span class="detail-header-tag small">
+            public                                    method
+                    </span>
+    </div>
+
+    <div class="doc-description">
+        <p><strong></strong></p>
+
+        
+            </div>
+
+    <table class="detail-table table table-striped table-bordered table-hover">
+        <tr><td colspan="3" class="signature"><span class="signature-defs">public</span> <span class="signature-type">void</span> <strong><a href="chofoteddy-wizard-wizard.html#run()-detail">run</a></strong> ( )</td></tr>
+            </table>
+
+<!--	-->
+</div>
+        </div>
+</div>
+
+<script type="text/javascript">
+    /*<![CDATA[*/
+    $("a.toggle").on('click', function () {
+        var $this = $(this);
+        if ($this.hasClass('properties-hidden')) {
+            $this.text($this.text().replace(/Show/,'Hide'));
+            $this.parents(".summary").find(".inherited").show();
+            $this.removeClass('properties-hidden');
+        } else {
+            $this.text($this.text().replace(/Hide/,'Show'));
+            $this.parents(".summary").find(".inherited").hide();
+            $this.addClass('properties-hidden');
+        }
+
+        return false;
+    });
+    /*
+     $(".sourceCode a.show").toggle(function () {
+     $(this).text($(this).text().replace(/show/,'hide'));
+     $(this).parents(".sourceCode").find("div.code").show();
+     },function () {
+     $(this).text($(this).text().replace(/hide/,'show'));
+     $(this).parents(".sourceCode").find("div.code").hide();
+     });
+     $("a.sourceLink").click(function () {
+     $(this).attr('target','_blank');
+     });
+     */
+    /*]]>*/
+</script>
+
+
+</div>
+
+<footer class="footer">
+        <p class="pull-right"><small>Page generated on Thu, 16 Jul 2015 01:52:03 +0000</small></p>
+    Powered by <a href="http://www.yiiframework.com/" rel="external">Yii Framework</a></footer>
+
+<script type="text/javascript">jQuery(document).ready(function () {
+    var shiftWindow = function () { scrollBy(0, -50) };
+    if (location.hash) shiftWindow();
+    window.addEventListener("hashchange", shiftWindow);
+var element = document.createElement("script");
+element.src = "./jssearch.index.js";
+document.body.appendChild(element);
+
+var searchBox = $('#searchbox');
+
+// search when typing in search field
+searchBox.on("keyup", function(event) {
+    var query = $(this).val();
+
+    if (query == '' || event.which == 27) {
+        $('#search-resultbox').hide();
+        return;
+    } else if (event.which == 13) {
+        var selectedLink = $('#search-resultbox a.selected');
+        if (selectedLink.length != 0) {
+            document.location = selectedLink.attr('href');
+            return;
+        }
+    } else if (event.which == 38 || event.which == 40) {
+        $('#search-resultbox').show();
+
+        var selected = $('#search-resultbox a.selected');
+        if (selected.length == 0) {
+            $('#search-results').find('a').first().addClass('selected');
+        } else {
+            var next;
+            if (event.which == 40) {
+                next = selected.parent().next().find('a').first();
+            } else {
+                next = selected.parent().prev().find('a').first();
+            }
+            if (next.length != 0) {
+                var resultbox = $('#search-results');
+                var position = next.position();
+
+//              TODO scrolling is buggy and jumps around
+//                resultbox.scrollTop(Math.floor(position.top));
+//                console.log(position.top);
+
+                selected.removeClass('selected');
+                next.addClass('selected');
+            }
+        }
+
+        return;
+    }
+    $('#search-resultbox').show();
+    $('#search-results').html('<li><span class="no-results">No results</span></li>');
+
+    var result = jssearch.search(query);
+
+    if (result.length > 0) {
+        var i = 0;
+        var resHtml = '';
+
+        for (var key in result) {
+            if (i++ > 20) {
+                break;
+            }
+            resHtml = resHtml +
+            '<li><a href="' + result[key].file.u.substr(3) +'"><span class="title">' + result[key].file.t + '</span>' +
+            '<span class="description">' + result[key].file.d + '</span></a></li>';
+        }
+        $('#search-results').html(resHtml);
+    }
+});
+
+// hide the search results on ESC
+$(document).on("keyup", function(event) { if (event.which == 27) { $('#search-resultbox').hide(); } });
+// hide search results on click to document
+$(document).bind('click', function (e) { $('#search-resultbox').hide(); });
+// except the following:
+searchBox.bind('click', function(e) { e.stopPropagation(); });
+$('#search-resultbox').bind('click', function(e) { e.stopPropagation(); });
+
+});</script></body>
+</html>

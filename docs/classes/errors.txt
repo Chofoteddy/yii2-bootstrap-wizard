@@ -1,0 +1,47 @@
+Array
+(
+    [0] => Array
+        (
+            [file] => ./Wizard.php
+            [message] => broken link to \yii\bootstrap\Widget::$options in chofoteddy\wizard\Wizard
+        )
+
+    [1] => Array
+        (
+            [file] => ./Wizard.php
+            [message] => broken link to \yii\helpers\Html::renderTagAttributes() in chofoteddy\wizard\Wizard
+        )
+
+    [2] => Array
+        (
+            [file] => ./Wizard.php
+            [message] => broken link to \yii\helpers\Html::renderTagAttributes() in chofoteddy\wizard\Wizard
+        )
+
+    [3] => Array
+        (
+            [file] => ./Wizard.php
+            [message] => broken link to \yii\helpers\Html::renderTagAttributes() in chofoteddy\wizard\Wizard
+        )
+
+    [4] => Array
+        (
+            [file] => ./Wizard.php
+            [message] => broken link to \yii\helpers\Html::renderTagAttributes() in chofoteddy\wizard\Wizard
+        )
+
+    [5] => Array
+        (
+            [line] => 119
+            [file] => ./Wizard.php
+            [message] => Method init has no parent to inherit from in chofoteddy\wizard\Wizard.
+        )
+
+    [6] => Array
+        (
+            [line] => 128
+            [file] => ./Wizard.php
+            [message] => Method run has no parent to inherit from in chofoteddy\wizard\Wizard.
+        )
+
+)
